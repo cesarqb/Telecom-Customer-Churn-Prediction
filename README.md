@@ -120,7 +120,9 @@ El análisis sigue las siguientes etapas:
 16. Guardado del modelo entrenado.
 17. Generación de predicciones para nuevos clientes.
 
-Ejemplo de resultado
+---
+
+## Ejemplo de resultado
 
 Cliente:
 
@@ -129,69 +131,22 @@ Antigüedad: 8 meses
 Servicio de internet: Fibra óptica
 Método de pago: Electronic Check
 
-Resultado del modelo:
+Resultado del modelo: Probabilidad de abandono 87%
 
-Probabilidad de abandono: 87%
+Predicción: CHURN = SI
 
-Predicción:
+--- 
 
-CHURN = YES
+## Posibles mejoras futuras
 
-Variables analizadas
+- Implementar modelos más avanzados como LightGBM y CatBoost.
+- Automatizar el flujo de trabajo con Scikit-learn Pipeline.
+- Aplicar técnicas más robustas de selección de variables.
+- Desplegar el modelo mediante FastAPI o Streamlit.
 
-Algunas variables incluidas en el análisis:
+---
 
-Gender
-Senior Citizen
-Partner
-Dependents
-Tenure
-Phone Service
-Internet Service
-Online Security
-Online Backup
-Device Protection
-Tech Support
-Streaming TV
-Streaming Movies
-Contract
-Paperless Billing
-Payment Method
-Monthly Charges
-Total Charges
-Impacto de negocio
-
-La implementación de un modelo de predicción de churn permite:
-
-Identificar clientes en riesgo antes de que abandonen la empresa.
-Diseñar campañas de retención personalizadas.
-Optimizar recursos comerciales.
-Reducir costos de adquisición de nuevos clientes.
-Mejorar la satisfacción del cliente.
-Incrementar el Customer Lifetime Value (CLV).
-Posibles mejoras futuras
-Implementar LightGBM y CatBoost.
-Aplicar técnicas avanzadas de Feature Selection.
-Incorporar SHAP para interpretabilidad del modelo.
-Automatizar pipelines mediante Scikit-Learn Pipeline.
-Implementar seguimiento de experimentos con MLflow.
-Desplegar el modelo mediante FastAPI.
-Crear un dashboard interactivo con Streamlit.
-Integrar monitoreo de desempeño en producción.
-Resultados esperados
-
-El proyecto busca obtener un modelo capaz de identificar clientes con alto riesgo de abandono mediante métricas robustas de clasificación, priorizando especialmente:
-
-Recall
-F1 Score
-ROC-AUC
-
-Estas métricas son fundamentales en problemas de churn debido al impacto económico asociado a la pérdida de clientes.
-
-Autor
+## 👨‍🏫 Autor
 
 César Quezada
-
 Científico de Datos | Docente Universitario | Mentor
-
-Especialista en Machine Learning, Analítica de Datos e Inteligencia Artificial.
