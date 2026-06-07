@@ -16,163 +16,80 @@ Proyecto completo de Ciencia de Datos para la predicción de fuga de clientes (C
 
 --- 
 
-Técnicas utilizadas
+## Técnicas utilizadas
 
 Durante el desarrollo del proyecto se aplicaron diversas técnicas de Ciencia de Datos y Machine Learning:
 
-Preparación de datos
-Limpieza de datos
-Tratamiento de valores faltantes
-Conversión de variables categóricas
-Codificación mediante One-Hot Encoding
-Escalado de variables numéricas
-Ingeniería de características
-Análisis Exploratorio de Datos (EDA)
-Distribución de variables
-Análisis univariado
-Análisis bivariado
-Análisis de correlación
-Visualización de patrones de churn
-Evaluación del desbalance de clases
-Balanceo de clases
+- Preparación de datos
+- Limpieza de datos
+- Tratamiento de valores faltantes
+- Conversión de variables categóricas
+- Codificación mediante One-Hot Encoding
+- Escalado de variables numéricas
+- Ingeniería de características
+- Análisis Exploratorio de Datos (EDA)
+- Análisis univariado, bivariado y multivariado
+- Análisis de correlación
+- Visualización de patrones de churn
+- Evaluación del desbalance de clases
+- Balanceo de clases
+- Modelos utilizados:
+    - Logistic Regression
+    - Decision Tree Classifier
+    - Random Forest Classifier
+    - XGBoost Classifier
+- Optimización de modelos
+- Serialización del modelo (pickle)
 
-Debido al desbalance existente entre clientes que abandonan y los que permanecen, se aplicaron diferentes estrategias:
+--- 
 
-Oversampling
-Undersampling
-SMOTE (Synthetic Minority Oversampling Technique)
-Modelos de Machine Learning
+## Tecnologías utilizadas
 
-Se entrenaron y compararon diferentes modelos de clasificación:
+- Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-Learn, Imbalanced-Learn (SMOTE), SciPy, Pickle, Joblib
 
-Logistic Regression
-Decision Tree Classifier
-Random Forest Classifier
-XGBoost Classifier
-Optimización de modelos
-GridSearchCV
-Cross Validation
-Evaluación de modelos
-Accuracy
-Precision
-Recall
-F1 Score
-ROC Curve
-ROC-AUC
-Confusion Matrix
-Classification Report
-Persistencia del modelo
-Pickle
-Joblib
-Tecnologías utilizadas
-Python
-Pandas
-NumPy
-Matplotlib
-Seaborn
-Scikit-Learn
-XGBoost
-Imbalanced-Learn (SMOTE)
-SciPy
-Pickle
-Joblib
-Estructura del proyecto
+---
 
+## Estructura del proyecto
+
+```
 Telecom-Customer-Churn-Prediction
-
 │
-
 ├── README.md
-
 ├── requirements.txt
-
 ├── churn_notebook.ipynb
-
 │
-
 ├── data
-
-│ ├── raw
-
-│ │ └── telecom_churn.csv
-
-│ │
-
-│ └── processed
-
-│ └── telecom_churn_clean.csv
-
+│   ├── raw
+│   │   └── telecom_churn.csv
+│   │
+│   └── processed
+│       └── telecom_churn_clean.csv
 │
-
 ├── notebooks
-
-│ └── churn_modeling.ipynb
-
+│   └── churn_modeling.ipynb
 │
-
 ├── src
-
-│ ├── preprocessing.py
-
-│ ├── feature_engineering.py
-
-│ ├── balancing.py
-
-│ ├── eda_evaluation.py
-
-│ ├── train_model.py
-
-│ └── evaluation.py
-
+│   ├── preprocessing.py
+│   ├── feature_engineering.py
+│   ├── balancing.py
+│   ├── eda_evaluation.py
+│   ├── train_model.py
+│   └── evaluation.py
 │
-
 ├── images
-
 │
-
 ├── models
-
-│ └── churn_model.pkl
-
+│   └── churn_model.pkl
 │
-
 └── results
+    ├── metrics.csv
+    └── predictions.csv
 
-├── metrics.csv
+```
 
-└── predictions.csv
+---
 
-Descripción de carpetas
-data/
-
-Contiene los datos originales y los conjuntos de datos procesados utilizados durante el modelado.
-
-notebooks/
-
-Incluye notebooks utilizados para el análisis exploratorio, preparación de datos y construcción de modelos.
-
-src/
-
-Contiene funciones reutilizables para:
-
-Preprocesamiento
-Ingeniería de características
-Balanceo de clases
-Entrenamiento de modelos
-Evaluación de resultados
-images/
-
-Almacena gráficos y visualizaciones generadas durante el análisis.
-
-models/
-
-Contiene los modelos entrenados serializados para futuras predicciones.
-
-results/
-
-Incluye métricas de evaluación y resultados finales de predicción.
-
-Flujo del análisis
+## Flujo del análisis
 
 El proyecto sigue las siguientes etapas:
 
