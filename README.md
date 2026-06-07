@@ -86,35 +86,40 @@ Telecom-Customer-Churn-Prediction
     └── predictions.csv
 
 ```
+---
+## Descripción de carpetas
+
+* data/ → contiene datos originales (vivienda, vivienda_new) y procesados.
+* notebooks/ → análisis exploratorio y desarrollo del modelo.
+* src/ → funciones reutilizables (preprocesamiento, modelado, evaluación).
+* images/ → visualizaciones generadas durante el análisis.
+* models/ → modelo entrenado guardado con pickle.
+* results/ → predicciones y métricas finales.
 
 ---
 
 ## Flujo del análisis
 
-El proyecto sigue las siguientes etapas:
+El análisis sigue las siguientes etapas:
 
-Carga y exploración inicial de datos.
-Análisis de calidad de datos.
-Tratamiento de valores faltantes.
-Análisis exploratorio de datos (EDA).
-Estudio del comportamiento de churn.
-Transformación de variables categóricas.
-Codificación mediante One-Hot Encoding.
-Escalado de variables.
-Análisis del desbalance de clases.
-Aplicación de técnicas de remuestreo:
-Oversampling
-Undersampling
-SMOTE
-División Train/Test.
-Entrenamiento de modelos de clasificación.
-Optimización de hiperparámetros mediante GridSearchCV.
-Evaluación comparativa de modelos.
-Análisis de métricas de desempeño.
-Interpretación de resultados.
-Selección del mejor modelo.
-Guardado del modelo entrenado.
-Generación de predicciones para nuevos clientes.
+1. Carga y exploración inicial de datos.
+2. Análisis de calidad de datos.
+3. Tratamiento de valores faltantes.
+4. Análisis exploratorio de datos (EDA).
+5. Estudio del comportamiento de churn.
+6. Transformación de variables categóricas.
+7. Codificación mediante One-Hot Encoding.
+8. Escalado de variables.
+9. Análisis del desbalance de clases.
+10. Aplicación de técnicas de remuestreo.
+11. División Train/Test.
+12. Entrenamiento de modelos de clasificación.
+13. Optimización de hiperparámetros mediante GridSearchCV.
+14. Evaluación comparativa de modelos.
+15. Análisis de métricas de desempeño.
+16. Guardado del modelo entrenado.
+17. Generación de predicciones para nuevos clientes.
+
 Ejemplo de resultado
 
 Cliente:
