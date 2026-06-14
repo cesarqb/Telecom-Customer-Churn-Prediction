@@ -69,10 +69,10 @@ Telecom-Customer-Churn-Prediction
 │   └── churn_modeling.ipynb
 │
 ├── src
+│   ├── eda_evaluation.py
 │   ├── preprocessing.py
 │   ├── feature_engineering.py
 │   ├── balancing.py
-│   ├── eda_evaluation.py
 │   ├── train_model.py
 │   └── evaluation.py
 │
