@@ -1,7 +1,7 @@
 # src/train_model.py
 
 import pickle
-
+from sklearn.model_selection import GridSearchCV
 
 
 # ==========================================
@@ -36,6 +36,74 @@ def train_model(
     )
 
     return model
+
+
+
+# ==========================================
+# GRID SEARCH
+# ==========================================
+
+def train_gridsearch_model(
+    model,
+    param_grid,
+    X_train,
+    y_train,
+    cv=5,
+    scoring="accuracy",
+    n_jobs=-1,
+    verbose=1
+):
+    """
+    Realiza la búsqueda de hiperparámetros mediante GridSearchCV.
+
+    Parameters
+    ----------
+    model : estimator
+        Modelo de clasificación.
+
+    param_grid : dict
+        Diccionario con los hiperparámetros a evaluar.
+
+    X_train : pd.DataFrame
+
+    y_train : pd.Series
+
+    cv : int, default=5
+
+    scoring : str, default="accuracy"
+
+    n_jobs : int, default=-1
+
+    verbose : int, default=1
+
+    Returns
+    -------
+    best_model : estimator
+        Modelo con los mejores hiperparámetros.
+
+    best_params : dict
+        Mejores hiperparámetros encontrados.
+    """
+
+    grid_search = GridSearchCV(
+        estimator=model,
+        param_grid=param_grid,
+        cv=cv,
+        scoring=scoring,
+        n_jobs=n_jobs,
+        verbose=verbose
+    )
+
+    grid_search.fit(
+        X_train,
+        y_train
+    )
+
+    best_model = grid_search.best_estimator_
+    best_params = grid_search.best_params_
+
+    return best_model, best_params
+
 
 
 
